@@ -12,6 +12,20 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -inset-40 bg-[radial-gradient(closest-side,_rgba(124,58,237,0.18),_transparent_70%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(56,189,248,0.18),transparent_60%)]" />
+
+        {/* Aurora sweep */}
+        <motion.div
+          initial={{ x: '-20%' }}
+          animate={{ x: ['-20%', '120%'] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+          className="absolute top-1/4 h-40 w-2/3 bg-gradient-to-r from-fuchsia-500/10 via-indigo-400/10 to-sky-400/10 blur-2xl"/>
+
+        {/* Scanning beam */}
+        <motion.div
+          initial={{ y: '-30%' }}
+          animate={{ y: ['-30%', '110%'] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute inset-x-0 mx-auto h-24 w-full bg-gradient-to-b from-transparent via-white/5 to-transparent"/>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
